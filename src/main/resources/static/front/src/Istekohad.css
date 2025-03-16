@@ -1,0 +1,80 @@
+.istekohad-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    float: left;
+    flex-direction: column;
+    margin-left: 250px;
+}
+
+.istekohad-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.istekohad-row {
+    display:flex;
+    gap: 5px;
+    align-items: center;
+}
+.istekoht:nth-child(4) {
+    margin-right: 20px;
+}
+.row-label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.istekoht {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: lightgray;
+    border: 2px solid black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.istekoht:hover {
+    background-color: #ddd;
+}
+
+
+.istekoht.hõivatud {
+    background-color: red;
+    cursor: not-allowed;
+}
+
+.istekoht.valitud {
+    background-color: green;
+    color: white;
+}
+
+.koridor {
+    width: 20px;
+    height: 50px;
+    background-color: transparent;
+}
+.istekoht.soovitatud {
+    background-color: gray;
+}
+.filtrid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.filtrid label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
