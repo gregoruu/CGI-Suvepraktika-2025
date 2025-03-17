@@ -1,0 +1,170 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 17.2
+-- Dumped by pg_dump version 17.0
+
+-- Started on 2025-03-17 17:59:06
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET transaction_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- TOC entry 4 (class 2615 OID 2200)
+-- Name: public; Type: SCHEMA; Schema: -; Owner: -
+--
+
+CREATE SCHEMA public;
+
+
+--
+-- TOC entry 4850 (class 0 OID 0)
+-- Dependencies: 4
+-- Name: SCHEMA public; Type: COMMENT; Schema: -; Owner: -
+--
+
+COMMENT ON SCHEMA public IS 'standard public schema';
+
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- TOC entry 218 (class 1259 OID 16692)
+-- Name: lennud; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.lennud (
+    id bigint NOT NULL,
+    sihtkoht character varying(255) NOT NULL,
+    kuupaev character varying(255) NOT NULL,
+    lennuaeg character varying(255) NOT NULL,
+    hind integer NOT NULL,
+    valjumiskoht character varying(255)
+);
+
+
+--
+-- TOC entry 217 (class 1259 OID 16691)
+-- Name: lennud_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.lennud_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- TOC entry 4851 (class 0 OID 0)
+-- Dependencies: 217
+-- Name: lennud_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.lennud_id_seq OWNED BY public.lennud.id;
+
+
+--
+-- TOC entry 4695 (class 2604 OID 16698)
+-- Name: lennud id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.lennud ALTER COLUMN id SET DEFAULT nextval('public.lennud_id_seq'::regclass);
+
+
+--
+-- TOC entry 4844 (class 0 OID 16692)
+-- Dependencies: 218
+-- Data for Name: lennud; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+INSERT INTO public.lennud VALUES (54, 'London', '2025-03-15', '10:30', 150, 'Tallinn');
+INSERT INTO public.lennud VALUES (55, 'New York', '2025-03-16', '12:00', 450, 'Tallinn');
+INSERT INTO public.lennud VALUES (56, 'Berlin', '2025-03-17', '14:00', 200, 'Tallinn');
+INSERT INTO public.lennud VALUES (57, 'Tokyo', '2025-03-18', '16:00', 600, 'Tallinn');
+INSERT INTO public.lennud VALUES (58, 'Paris', '2025-03-19', '18:00', 180, 'Tallinn');
+INSERT INTO public.lennud VALUES (59, 'Madrid', '2025-03-20', '09:00', 220, 'Tartu');
+INSERT INTO public.lennud VALUES (60, 'Rome', '2025-03-21', '11:30', 250, 'Tartu');
+INSERT INTO public.lennud VALUES (61, 'Dubai', '2025-03-22', '22:00', 500, 'Pärnu');
+INSERT INTO public.lennud VALUES (62, 'Sydney', '2025-03-23', '23:30', 750, 'Pärnu');
+INSERT INTO public.lennud VALUES (63, 'Toronto', '2025-03-24', '08:15', 400, 'Tallinn');
+INSERT INTO public.lennud VALUES (64, 'Los Angeles', '2025-03-25', '13:45', 550, 'Tallinn');
+INSERT INTO public.lennud VALUES (65, 'Moscow', '2025-03-26', '17:20', 300, 'Tartu');
+INSERT INTO public.lennud VALUES (66, 'Istanbul', '2025-03-27', '19:10', 270, 'Tallinn');
+INSERT INTO public.lennud VALUES (67, 'Helsinki', '2025-03-28', '07:50', 160, 'Tallinn');
+INSERT INTO public.lennud VALUES (68, 'Stockholm', '2025-03-29', '06:30', 175, 'Tallinn');
+INSERT INTO public.lennud VALUES (69, 'Copenhagen', '2025-03-30', '15:40', 210, 'Tallinn');
+INSERT INTO public.lennud VALUES (70, 'Vienna', '2025-03-31', '10:10', 190, 'Tallinn');
+INSERT INTO public.lennud VALUES (71, 'Oslo', '2025-04-01', '12:20', 165, 'Tartu');
+INSERT INTO public.lennud VALUES (72, 'Athens', '2025-04-02', '14:50', 240, 'Tallinn');
+INSERT INTO public.lennud VALUES (73, 'Lisbon', '2025-04-03', '16:30', 230, 'Tallinn');
+INSERT INTO public.lennud VALUES (74, 'Warsaw', '2025-04-04', '09:15', 200, 'Tallinn');
+INSERT INTO public.lennud VALUES (75, 'Brussels', '2025-04-05', '11:05', 185, 'Pärnu');
+INSERT INTO public.lennud VALUES (76, 'Amsterdam', '2025-04-06', '13:25', 220, 'Tallinn');
+INSERT INTO public.lennud VALUES (77, 'Budapest', '2025-04-07', '15:15', 205, 'Tallinn');
+INSERT INTO public.lennud VALUES (78, 'Prague', '2025-04-08', '17:35', 195, 'Tartu');
+INSERT INTO public.lennud VALUES (79, 'Dublin', '2025-04-09', '19:55', 250, 'Tallinn');
+INSERT INTO public.lennud VALUES (80, 'Edinburgh', '2025-04-10', '21:45', 260, 'Tallinn');
+INSERT INTO public.lennud VALUES (81, 'Munich', '2025-04-11', '06:25', 230, 'Tallinn');
+INSERT INTO public.lennud VALUES (82, 'Zurich', '2025-04-12', '08:10', 280, 'Tallinn');
+INSERT INTO public.lennud VALUES (83, 'Barcelona', '2025-04-13', '10:30', 300, 'Tallinn');
+INSERT INTO public.lennud VALUES (84, 'Frankfurt', '2025-04-14', '12:40', 275, 'Tallinn');
+INSERT INTO public.lennud VALUES (85, 'Milan', '2025-04-15', '14:55', 260, 'Tallinn');
+INSERT INTO public.lennud VALUES (86, 'Venice', '2025-04-16', '16:20', 290, 'Tartu');
+INSERT INTO public.lennud VALUES (87, 'Seoul', '2025-04-17', '18:30', 580, 'Tallinn');
+INSERT INTO public.lennud VALUES (88, 'Hong Kong', '2025-04-18', '20:45', 620, 'Tallinn');
+INSERT INTO public.lennud VALUES (89, 'Shanghai', '2025-04-19', '22:10', 650, 'Tallinn');
+INSERT INTO public.lennud VALUES (90, 'Bangkok', '2025-04-20', '07:30', 500, 'Tallinn');
+INSERT INTO public.lennud VALUES (91, 'Singapore', '2025-04-21', '09:40', 530, 'Tallinn');
+INSERT INTO public.lennud VALUES (92, 'Delhi', '2025-04-22', '11:50', 420, 'Tallinn');
+INSERT INTO public.lennud VALUES (93, 'Beijing', '2025-04-23', '14:05', 640, 'Tallinn');
+INSERT INTO public.lennud VALUES (94, 'Jakarta', '2025-04-24', '16:15', 480, 'Tallinn');
+INSERT INTO public.lennud VALUES (95, 'Kuala Lumpur', '2025-04-25', '18:20', 510, 'Tallinn');
+INSERT INTO public.lennud VALUES (96, 'Manila', '2025-04-26', '20:35', 470, 'Tartu');
+INSERT INTO public.lennud VALUES (97, 'Rio de Janeiro', '2025-04-27', '22:50', 680, 'Tallinn');
+INSERT INTO public.lennud VALUES (98, 'Buenos Aires', '2025-04-28', '07:00', 720, 'Tallinn');
+INSERT INTO public.lennud VALUES (99, 'Mexico City', '2025-04-29', '09:15', 660, 'Tallinn');
+INSERT INTO public.lennud VALUES (100, 'Cape Town', '2025-04-30', '11:30', 550, 'Tallinn');
+INSERT INTO public.lennud VALUES (101, 'Johannesburg', '2025-05-01', '13:45', 530, 'Tallinn');
+INSERT INTO public.lennud VALUES (102, 'Nairobi', '2025-05-02', '15:55', 490, 'Tallinn');
+INSERT INTO public.lennud VALUES (103, 'Cairo', '2025-05-03', '18:10', 460, 'Tallinn');
+
+
+--
+-- TOC entry 4852 (class 0 OID 0)
+-- Dependencies: 217
+-- Name: lennud_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.lennud_id_seq', 103, true);
+
+
+--
+-- TOC entry 4697 (class 2606 OID 16700)
+-- Name: lennud lennud_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.lennud
+    ADD CONSTRAINT lennud_pkey PRIMARY KEY (id);
+
+
+-- Completed on 2025-03-17 17:59:06
+
+--
+-- PostgreSQL database dump complete
+--
+
