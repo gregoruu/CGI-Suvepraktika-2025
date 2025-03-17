@@ -3,7 +3,8 @@
 Veebirakendus lennureisijale lennu planeerimiseks ja lennukis istekohtade soovitamiseks. Dokumentatsiooni leiab dokumentatsiooni failist.
 
 1. Kloonida repositoorium
-2. Lae alla Node.js (https://nodejs.org/en)
+2. Avada endale sobiv andmebaasihaldustööriist (nt DBeaver) ja loo uus tühi andmebaas. Nimeks pane "lennud" ja vajuta OK. Paremklõps andmebaasil, Tools>Restore ja vali kloonitud kaustast "uustalu-lennud" ja taasta andmebaas
+3. Lae alla Node.js (https://nodejs.org/en)
    mine demo\src\main\resources\static\front ja sisesta konsooli "npm install" ja "npm start"
 4. Jooksuta koodi demo\src\main\java\com\example\demo\DemoApplication.java
 5. Kui kõik töötab, peaks brauseris avanema http://localhost:3000 ja näed oma rakendust.
